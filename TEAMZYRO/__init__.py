@@ -30,3 +30,14 @@ Telegram = TeleAPI()
 YouTube = YouTubeAPI()
 
 APP = "Raiden_Robot"  # connect music api key "Dont change it"
+
+from motor.motor_asyncio import AsyncIOMotorClient
+
+ZYRO = AsyncIOMotorClient(mongo_url)
+db = ZYRO['gaming_create']
+user_totals_collection = db['gaming_totals']
+group_user_totals_collection = db['gaming_group_total']
+top_global_groups_collection = db['gaming_global_groups']
+pm_users = db['gaming_pm_users']
+destination_collection = db['gamimg_user_collection']
+destination_char = db['gaming_anime_characters']
