@@ -41,3 +41,6 @@ top_global_groups_collection = db['gaming_global_groups']
 pm_users = db['gaming_pm_users']
 destination_collection = db['gamimg_user_collection']
 destination_char = db['gaming_anime_characters']
+#----------------------GOKU-------------×
+collection = destination_char
+user_collection = destination_collection
