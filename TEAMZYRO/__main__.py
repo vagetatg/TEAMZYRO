@@ -49,7 +49,7 @@ async def init():
     except:
         pass
     await Hotty.decorators()
-    LOGGER("TEAMZYRO ").info(
+    LOGGER("TEAMZYRO").info(
         "ᴅʀᴏᴘ ʏᴏᴜʀ ɢɪʀʟꜰʀɪᴇɴᴅ'ꜱ ɴᴜᴍʙᴇʀ ᴀᴛ  ᴊᴏɪɴ https://t.me/PiratesMainchat ꜰᴏʀ ᴀɴʏ ɪꜱꜱᴜᴇꜱ"
     )
     await idle()
