@@ -5,34 +5,34 @@
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/d02b81736a7e9519c6386.jpg">
+  <img src="https://files.catbox.moe/bm3917.jpg">
 </p>
 
 <p align="center">
-<a href="https://github.com/Gokukhan1/stargazers"><img src="https://img.shields.io/github/stars/Gokukhan1/musicgoku?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
-<a href="https://github.com/Gokukhan1/musicgoku/network/members"> <img src="https://img.shields.io/github/forks/Gokukhan1/musicgoku?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
-<a href="https://github.com/Gokukhan1/musicgoku/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
+<a href="https://github.com/TeamZyro/stargazers"><img src="https://img.shields.io/github/stars/TeamZyro/TEAMZYRO?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
+<a href="https://github.com/TeamZyro/TEAMZYRO/network/members"> <img src="https://img.shields.io/github/forks/TeamZyro/TEAMZYRO?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
+<a href="https://github.com/TeamZyro/TEAMZYRO/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
 <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/Written%20in-Python-orange?style=for-the-badge&logo=python" alt="Python" /> </a>
-<a href="https://github.com/Gokukhan1/musicgoku/commits/WCGKING"> <img src="https://img.shields.io/github/last-commit/Gokukhan1/musicgoku?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/TeamZyro/TEAMZYRO/commits/WCGKING"> <img src="https://img.shields.io/github/last-commit/TeamZyro/TEAMZYRO?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
 </h2>
-<img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♦𝙳𝙴𝙿𝙻𝙾𝚈+𝙾𝙽+𝙷𝙴𝚁𝙾𝙺𝚄♦;📡+𝙽𝙾+𝙷𝙴𝚁𝙾𝙺𝚄+𝙱𝙰𝙽+𝙸𝚂𝚂𝚄𝙴+𝙰𝙻𝚂𝙾+𝚅𝙿𝚂+𝙳𝙴𝙿𝙻𝙾𝚈+📍+𝙿𝚁𝙴𝚂𝙴𝙽𝚃;❤️+𝙿𝙾𝚆𝙴𝚁𝙳+𝙱𝚈+xeno+kakarot🔥">
+<img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♦𝙳𝙴𝙿𝙻𝙾𝚈+𝙾𝙽+𝙷𝙴𝚁𝙾𝙺𝚄♦;📡+𝙽𝙾+𝙷𝙴𝚁𝙾𝙺𝚄+𝙱𝙰𝙽+𝙸𝚂𝚂𝚄𝙴+𝙰𝙻𝚂𝙾+𝚅𝙿𝚂+𝙳𝙴𝙿𝙻𝙾𝚈+📍+𝙿𝚁𝙴𝚂𝙴𝙽𝚃;❤️+𝙿𝙾𝚆𝙴𝚁𝙳+𝙱𝚈+𝗧𝗘𝗔𝗠+𝗭𝗬𝗥𝗢🔥">
 
 <p align="center">
-  <img src="https://telegra.ph/file/925eade709484516c5fe3.jpg">
+  <img src="https://files.catbox.moe/bm3917.jpg">
 </p>
 
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Gokukhan1/musicgoku"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/TeamZyro/TEAMZYRO"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 </p>
 
-**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [MUSIC X WAIFU](https://t.me/for_tying_bot)**
+**𝙏𝙀𝙎𝙏 𝘽𝙊𝙏 ➣ [TEAMXZYRO](https://t.me/One_for_all_rebot)**
 
 
 
@@ -42,7 +42,7 @@
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʟᴏᴄᴀʟ ʜᴏsᴛ/ ᴠᴘs 」─
 </h3>
 
-- Get your [Necessary Variables](https://github.com/Gokukhan1/musicgoku/blob/master/sample.env)
+- Get your [Necessary Variables](https://github.com/TeamZyro/TEAMZYRO/blob/master/sample.env)
 ---
 
 ### 🔧 Quick Setup
@@ -66,7 +66,7 @@
    ```
 5. **Clone the Repository**
    ```bash
-   git clone https://github.com/Gokukhan1/musicgoku && cd BrandrdXMusic
+   git clone https://github.com/TeamZyro/TEAMZYRO && cd TEAMZYRO
    ```
 6. **Install Requirements**
    ```bash
@@ -102,7 +102,12 @@
 </p>
 
 <p align="center">
-<a href="https://t.me/PiratesMainchat"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/TEAMZYRO"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
 - <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ pirate](https://github.com/Gokukhan1) ғᴏʀ [MUSIC X WAIFU BOT](https://t.me/One_for_all_rebot)_</b>
+
+### This is a Public 𝗕𝗢𝗧 Made by 
+- [Xeno Kakarot](https://t.me/Xeno_Kakarot)
+- [Ryomen Sukuna](https://t.me/sukuna_Dev)
+- 
