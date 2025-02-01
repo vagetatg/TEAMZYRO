@@ -105,7 +105,7 @@
 <a href="https://t.me/TEAMZYRO"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 
-- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ pirate](https://github.com/Gokukhan1) ғᴏʀ [MUSIC X WAIFU BOT](https://t.me/One_for_all_rebot)_</b>
+- <b> _sᴩᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ [ᴛᴇᴀᴍ pirate](https://github.com/TeamZyro/) ғᴏʀ testing bot [TEAMZYROXBOT](https://t.me/One_for_all_rebot)_</b>
 
 ### This is a Public 𝗕𝗢𝗧 Made by 
 - [Xeno Kakarot](https://t.me/Xeno_Kakarot)
