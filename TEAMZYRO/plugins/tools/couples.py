@@ -7,6 +7,7 @@ from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from telegraph import upload_file
 from pymongo import MongoClient
+from TEAMZYRO import db
 
 COLLECTION_NAME = "coples"
 couples_collection = db[COLLECTION_NAME]
