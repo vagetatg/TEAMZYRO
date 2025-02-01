@@ -1,12 +1,15 @@
 import os
 import random
-from datetime import datetime
-
+from datetime import datetime, timedelta
 from PIL import Image, ImageDraw
-from pyrogram import *
-from pyrogram.enums import *
+from pyrogram import Client, filters
+from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from telegraph import upload_file
+from pymongo import MongoClient
+
+COLLECTION_NAME = "coples"
+couples_collection = db[COLLECTION_NAME]
 
 # BOT FILE NAME
 from TEAMZYRO import app as app
@@ -21,40 +24,67 @@ POLICE = [
 ]
 
 
-def dt():
+def get_today_date():
+    """Get today's date in DD/MM/YYYY format."""
     now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y %H:%M")
-    dt_list = dt_string.split(" ")
-    return dt_list
+    return now.strftime("%d/%m/%Y")
 
 
-def dt_tom():
-    a = (
-        str(int(dt()[0].split("/")[0]) + 1)
-        + "/"
-        + dt()[0].split("/")[1]
-        + "/"
-        + dt()[0].split("/")[2]
+def get_tomorrow_date():
+    """Get tomorrow's date in DD/MM/YYYY format."""
+    tomorrow = datetime.now() + timedelta(days=1)
+    return tomorrow.strftime("%d/%m/%Y")
+
+
+async def save_couple(chat_id, date, couple_data, image_url):
+    """Save the couple data to MongoDB."""
+    couples_collection.update_one(
+        {"chat_id": chat_id, "date": date},
+        {"$set": {"couple_data": couple_data, "image_url": image_url}},
+        upsert=True,
     )
-    return a
 
 
-tomorrow = str(dt_tom())
-today = str(dt()[0])
+async def get_couple(chat_id, date):
+    """Retrieve the couple data from MongoDB."""
+    return couples_collection.find_one({"chat_id": chat_id, "date": date})
 
 
 @app.on_message(filters.command("couples"))
-async def ctest(_, message):
+async def couples_command(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
         return await message.reply_text("ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
-    try:
-        #  is_selected = await get_couple(cid, today)
-        #  if not is_selected:
-        msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
-        # GET LIST OF USERS
-        list_of_users = []
 
+    today = get_today_date()
+    tomorrow = get_tomorrow_date()
+
+    try:
+        # Check if couples are already generated for today
+        existing_couple = await get_couple(cid, today)
+        if existing_couple:
+            c1_id = existing_couple["couple_data"]["c1_id"]
+            c2_id = existing_couple["couple_data"]["c2_id"]
+            image_url = existing_couple["image_url"]
+
+            N1 = (await app.get_users(c1_id)).mention
+            N2 = (await app.get_users(c2_id)).mention
+
+            TXT = f"""
+**ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
+
+{N1} + {N2} = 💚
+
+ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
+"""
+            await message.reply_photo(image_url, caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE))
+            return
+
+        # Generate new couples
+        msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
+
+        # Get list of users
+        list_of_users = []
         async for i in app.get_chat_members(message.chat.id, limit=50):
             if not i.user.is_bot:
                 list_of_users.append(i.user.id)
@@ -119,40 +149,25 @@ async def ctest(_, message):
             reply_markup=InlineKeyboardMarkup(POLICE),
         )
         await msg.delete()
+
+        # Upload image to Telegraph and save couple data
         a = upload_file(f"test_{cid}.png")
-        for x in a:
-            img = "https://graph.org/" + x
-            couple = {"c1_id": c1_id, "c2_id": c2_id}
-        # await save_couple(cid, today, couple, img)
+        image_url = "https://graph.org/" + a[0]
+        couple_data = {"c1_id": c1_id, "c2_id": c2_id}
+        await save_couple(cid, today, couple_data, image_url)
 
-    # elif is_selected:
-    #   msg = await message.reply_text("𝐆ᴇᴛᴛɪɴɢ 𝐓ᴏᴅᴀʏs 𝐂ᴏᴜᴘʟᴇs 𝐈ᴍᴀɢᴇ...")
-    #   b = await _get_image(cid)
-    #  c1_id = int(is_selected["c1_id"])
-    #  c2_id = int(is_selected["c2_id"])
-    #  c1_name = (await app.get_users(c1_id)).first_name
-    # c2_name = (await app.get_users(c2_id)).first_name
-
-    #   TXT = f"""
-    # **ᴛᴏᴅᴀʏ's sᴇʟᴇᴄᴛᴇᴅ ᴄᴏᴜᴘʟᴇs 🎉 :
-    # ➖➖➖➖➖➖➖➖➖➖➖➖
-    # [{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
-    # ➖➖➖➖➖➖➖➖➖➖➖➖
-    # ɴᴇxᴛ ᴄᴏᴜᴘʟᴇꜱ ᴡɪʟʟ ʙᴇ ꜱᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
-    # """
-    #        await message.reply_photo(b, caption=TXT)
-    # await msg.delete()
     except Exception as e:
         print(str(e))
-    try:
-        os.remove(f"./downloads/pfp1.png")
-        os.remove(f"./downloads/pfp2.png")
-        os.remove(f"test_{cid}.png")
-    except Exception:
-        pass
+    finally:
+        try:
+            os.remove(f"./downloads/pfp1.png")
+            os.remove(f"./downloads/pfp2.png")
+            os.remove(f"test_{cid}.png")
+        except Exception:
+            pass
 
 
 __mod__ = "COUPLES"
 __help__ = """
-**» /couples** - Get Todays Couples Of The Group In Interactive View
+**» /couples** - Get Today's Couples Of The Group In Interactive View
 """
