@@ -31,7 +31,16 @@ YouTube = YouTubeAPI()
 
 APP = "Raiden_Robot"  # connect music api key "Dont change it"
 
+#-------------------goku------------------×
+
+
 from motor.motor_asyncio import AsyncIOMotorClient
+from telegram.ext import Application
+import config
+
+
+
+application = Application.builder().token(BOT_TOKEN).build()
 
 ZYRO = AsyncIOMotorClient(mongo_url)
 db = ZYRO['gaming_create']
