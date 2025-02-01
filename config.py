@@ -31,6 +31,9 @@ CHARA_CHANNEL_ID = int(getenv("CHARA_CHANNEL_ID", None))
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", "7078181502"))
 
+#get you waifu partner 
+PARTNER = int(gentenv("PARTNER", "7078181502"))
+
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
