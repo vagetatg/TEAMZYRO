@@ -36,7 +36,7 @@ APP = "Raiden_Robot"  # connect music api key "Dont change it"
 
 from motor.motor_asyncio import AsyncIOMotorClient
 from telegram.ext import Application
-import config
+from config import BOT_TOKEN
 
 
 
