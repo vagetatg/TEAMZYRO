@@ -42,6 +42,21 @@
         "value": "",
         "required": true
       },
+      "UPDATE_CHAT": {
+        "description": "give group for waifu",
+        "value": "",
+        "required": true
+      },
+      "CHARA_CHANNEL_ID": {
+        "description": "guve waifu datadase channel",
+        "value": "",
+        "required": true
+      },
+      "PARTNER": {
+        "description": "give your waifu partner id",
+        "value": "",
+        "required": true
+      },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "HRKU-ebe35615-918a-473e-8474-d9eb2e506391",
