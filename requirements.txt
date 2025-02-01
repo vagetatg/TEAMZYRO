@@ -42,3 +42,8 @@ bing_image_downloader
 gpytranslate
 python-telegram-bot
 pymongo[srv]
+cachetools
+pyrate-limiter
+app
+Flask[async]
+easyocr
